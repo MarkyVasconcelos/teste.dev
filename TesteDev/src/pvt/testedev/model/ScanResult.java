@@ -1,6 +1,9 @@
 package pvt.testedev.model;
 
-public class ScanResult {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class ScanResult implements Parcelable {
 	/** Database id */
 	private long id; 
 	private String qrcode;
@@ -13,6 +16,10 @@ public class ScanResult {
 		this.qrcode = qrcode;
 		this.lat = lat;
 		this.lon = lon;
+	}
+
+	public ScanResult(Parcel source) {
+		this(source.readLong(), source.readString(), source.readString(), source.readString());
 	}
 
 	public String getQrcode() {
@@ -45,5 +52,30 @@ public class ScanResult {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public static Parcelable.Creator<ScanResult> CREATOR = new Creator<ScanResult>() {
+		
+		@Override
+		public ScanResult[] newArray(int size) {
+			return new ScanResult[size];
+		}
+		
+		@Override
+		public ScanResult createFromParcel(Parcel source) {
+			return new ScanResult(source);
+		}
+	};
+	@Override
+	public int describeContents() {
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel arg0, int arg1) {
+		arg0.writeLong(id);
+		arg0.writeString(qrcode);
+		arg0.writeString(lat);
+		arg0.writeString(lon);
 	}
 }

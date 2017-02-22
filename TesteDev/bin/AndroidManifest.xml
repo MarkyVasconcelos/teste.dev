@@ -41,9 +41,14 @@
             android:theme="@style/CaptureTheme"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
+            android:parentActivityName=".MainActivity"
             android:name=".ResultsActivity"
             android:label="@string/title_activity_results" >
         </activity>
+		<activity
+		    android:parentActivityName=".ResultsActivity"
+            android:name=".DetailsActivity"
+            android:label="Detalhes" />
     </application>
 
 </manifest>

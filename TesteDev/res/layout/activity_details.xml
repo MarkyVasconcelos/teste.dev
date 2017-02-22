@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow>
+
+            <TextView android:text="Altura" />
+
+            <TextView android:id="@+id/tv_height" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="peso" />
+
+            <TextView android:id="@+id/tv_mass" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Cabelo" />
+
+            <TextView android:id="@+id/tv_hair_color" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Olhos" />
+
+            <TextView android:id="@+id/tv_eyes_color" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Nascimento" />
+
+            <TextView android:id="@+id/tv_birth_year" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Genero" />
+
+            <TextView android:id="@+id/tv_gender" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Planeta" />
+
+            <TextView android:id="@+id/tv_homeworld" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filmes" />
+
+    <ListView
+        android:id="@+id/lv_films"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
